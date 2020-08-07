@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap-grid.min.css"/>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="col1header">New Reminder</h3><br /><br />
+            <form class="userinput">
+                <div class='inputlabel'>Title: </div>
+                <input type="text" class="fields"><br /><br /><br /><br />
+                <div class='inputlabel'>Frequency: </div>
+
+                <input type="checkbox" class="box">
+                <div class='inputlabel display'>Sun. </div>
+                <input type="checkbox" class="box">
+                <div class='inputlabel display'>Mon. </div>
+                <input type="checkbox" class="box"> 
+                <div class='inputlabel display'>Tue. </div>
+                <input type="checkbox" class="box"> 
+                <div class='inputlabel display'>Wed. </div>
+                <input type="checkbox" class="box"> 
+                <div class='inputlabel display'>Thu. </div>
+                <input type="checkbox" class="box">
+                <div class='inputlabel display'>Fri. </div>
+                <input type="checkbox" class="box">
+                <div class='inputlabel display'>Sat. </div>
+                <br /><br /><br />
+                
+                <div class='inputlabel'>What time(s) should you be reminded? </div>
+                <input type="text" class="fields" placeholder="format: 12:30 pm, 9:00 am,">
+                    <br /><br /><br /><br />
+                    <div class='inputlabel'>Details: </div>
+                <textarea class="details"></textarea><br /><br />
+                <div class="col1buttons">
+                    <input class="save" type="reset" value="Save" (click)="addButton()">
+                    <input class="cancel" type="reset" value="Cancel"> 
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4" id="midcol">
+            <button class="item" (click)="toggle(entry)" *ngFor="let entry of entries; let i = index;">{{entry.title}}</button>
+        </div>
+        <div class="col-md-4">
+            <div class="default" *ngIf="!show">Click on an item to see it here! </div>
+            <div class="testentry" *ngIf="show">
+                {{displayContent}} <br /><br /><br /><br>
+                Frequency:<br />
+                {{displayContent2}} <br /><br />
+                Times:<br />
+                {{displayContent3}} <br /><br /><br /><br />
+                Details:<br />
+                {{displayContent4}} <br /><br />
+            </div>
+        </div>
+      </div>     
+</div>

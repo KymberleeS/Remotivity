@@ -1,0 +1,57 @@
+
+<!-- <div class='container'>
+  <div class='window'>
+      <div class='overlay'></div>
+      <div class='content'>
+        <div class='title'>Profile Settings</div>
+        <div class="input-block">
+            <label for="name">Name </label>
+            <input type="text">
+        </div>
+        <div class="input-block">
+            <label for="email">Email </label>
+            <input type="text" placeholder= {{currentUser.email}}>
+        </div>
+        <div class="input-block">
+            <label for="password">Password </label>
+            <input  type= password value= {{currentUser.password}}>
+        </div>
+        <button class='ghost-round full-width'>Update</button>
+      </div>
+  </div> -->
+
+  <!-- MOCK DATA -->
+<div class='container'>
+    <div class='window'>
+        <div class='overlay'></div>
+        <div class='content'>
+          <div class='title'>Profile Settings</div>
+          <div class="input-block">
+              <label for="name" >Name </label>
+              <div *ngIf="!updated">
+                <input type="text" placeholder= "User Example">
+              </div>
+              <div *ngIf="updated">
+                <input type="text" placeholder= {{name}}>
+              </div>
+          </div>
+          <div class="input-block">
+            <label for="email">Email </label>
+              <div *ngIf="!updated">
+                <input type="text" placeholder= user@gmail.com>
+              </div>
+              <div *ngIf="updated">
+                <input type="text" placeholder= {{email}}>
+              </div>
+          <div class="input-block">
+              <label for="password">Password </label>
+              <div *ngIf="!updated">
+                <input type= password value= 123456>
+              </div>
+              <div *ngIf="updated">
+                <input type= password value= {{password}}>
+              </div>
+          </div>
+          <button (click)="update()" class='ghost-round full-width'>Update</button>
+        </div>
+    </div>

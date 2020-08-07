@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap-grid.min.css"/>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6" id="leftcol">
+            <button class="item" (click)="toggle()">Sunday, 08-02-2020</button>
+            <button class="item2" (click)="toggle2()">Monday, 08-03-2020</button>
+            <button class="item3" (click)="toggle3()">Tuesday, 08-04-2020</button>
+            <button class="item4" (click)="toggle4()">Wednesday, 08-05-2020</button>
+            <button class="item5" (click)="toggle5()">Thursday, 08-06-2020</button>
+            <button class="item6" (click)="toggle6()">Friday, 08-07-2020</button>
+        </div>
+        <div class="col-md-6">
+            <div class="default" *ngIf="!show && !show2 && !show3 && !show4 && !show5 && !show6">
+                Click on an item to see it here!
+            </div>
+            <div class="testentry" *ngIf="show">
+                Productivity:&nbsp;&nbsp;&nbsp;&nbsp;1 <br /><br /><br />
+                Wellness:&nbsp;&nbsp;&nbsp;&nbsp;5 <br /><br /><br />
+                Overall Day:&nbsp;&nbsp;&nbsp;&nbsp;3 <br /><br /><br />
+            </div>
+            <div class="testentry2" *ngIf="show2">
+                Productivity:&nbsp;&nbsp;&nbsp;&nbsp;5 <br /><br /><br />
+                Wellness:&nbsp;&nbsp;&nbsp;&nbsp;3 <br /><br /><br />
+                Overall Day:&nbsp;&nbsp;&nbsp;&nbsp;3 <br /><br /><br />
+            </div>
+            <div class="testentry3" *ngIf="show3">
+                Productivity:&nbsp;&nbsp;&nbsp;&nbsp;3 <br /><br /><br />
+                Wellness:&nbsp;&nbsp;&nbsp;&nbsp;3 <br /><br /><br />
+                Overall Day:&nbsp;&nbsp;&nbsp;&nbsp;1 <br /><br /><br />
+            </div>
+            <div class="testentry4" *ngIf="show4">
+                Productivity:&nbsp;&nbsp;&nbsp;&nbsp;2 <br /><br /><br />
+                Wellness:&nbsp;&nbsp;&nbsp;&nbsp;3 <br /><br /><br />
+                Overall Day:&nbsp;&nbsp;&nbsp;&nbsp;5 <br /><br /><br />
+            </div>
+            <div class="testentry5" *ngIf="show5">
+                Productivity:&nbsp;&nbsp;&nbsp;&nbsp;4 <br /><br /><br />
+                Wellness:&nbsp;&nbsp;&nbsp;&nbsp;2 <br /><br /><br />
+                Overall Day:&nbsp;&nbsp;&nbsp;&nbsp;4 <br /><br /><br />
+            </div>
+            <div class="testentry6" *ngIf="show6">
+                Productivity:&nbsp;&nbsp;&nbsp;&nbsp;2 <br /><br /><br />
+                Wellness:&nbsp;&nbsp;&nbsp;&nbsp;1 <br /><br /><br />
+                Overall Day:&nbsp;&nbsp;&nbsp;&nbsp;4 <br /><br /><br />
+            </div>
+        </div>
+      </div>     
+</div>

@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.pageheader {
+    text-align: center;
+    font-family: "Montserrat";
+    color: #2f2587;
+}
+
+.faces {
+    width: 75px;
+    height: 75px;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 5%;
+    font-family: Monospace;
+}
+
+.btnPrimary {
+    background-color: #9b89d2;
+    border: 1px solid;
+    border-color: #9b89d2;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: "Montserrat";
+	font-size: 17px;
+	padding: 16px 31px;
+	text-decoration: none;
+}
+
+.btnPrimary:hover {
+    background: linear-gradient(to bottom, #9b89d2 5%, #88b0e9 100%);
+}
+

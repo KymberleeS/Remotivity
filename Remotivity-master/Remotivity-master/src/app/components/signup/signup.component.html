@@ -1,0 +1,83 @@
+<!--adding the descrption to the signup page-->
+<h4 class="description">Stay on top of your work and yourself with our customizable features and helpful 
+    resources when you sign up today!<br /><br />Have an account already? Log in!</h4>
+<!--section for signup box-->
+<div class="box">
+    <!--adding logo image(s)-->
+    <div class="logos">
+        <img class="titleLogo" src={{titleLogo}}>
+        <img class="imgLogo" src={{imgLogo}}>
+    </div>
+    <h2 id="signUp">Sign Up</h2>
+    <br />
+    <!--elements that goes inside signup box-->
+    <div class="boxBody">
+        <form [formGroup]="register" (ngSubmit)="onSubmit()" novalidate>
+            <!--input for first name with validators-->
+            <div class="form-group"> 
+                <label for="firstName" class='input-fields'>FIRST NAME</label><br />
+                <input type="text" formControlName="firstName" class="form-control" [ngClass]=
+                 "{'is-invalid': submitted && reg.firstName.errors}"/>
+                 <div *ngIf="submitted && reg.firstName.errors" class=invalid-feedback>
+                     <div class="validator" *ngIf="reg.firstName.errors.required">First Name is required</div>
+                 </div>
+            </div>
+            <br />
+            <!--input for last name with validators-->
+            <div class="form-group">
+                <label for="lastName" class='input-fields'>LAST NAME</label> <br />
+                <input type="text" formControlName="lastName" class="form-control" [ngClass]=
+                "{'is-invalid': submitted && reg.lastName.errors}"/>
+                <div *ngIf="submitted && reg.lastName.errors" class=invalid-feedback>
+                    <div class="validator" *ngIf="reg.lastName.errors.required">Last Name is required</div>
+                </div>
+            </div>
+            <br />
+            <!--input for email with validators-->
+            <div class="form-group">
+                <label for="email" class='input-fields'>EMAIL</label> <br />
+                <input type="text" formControlName="email" class="form-control" [ngClass]=
+                "{'is-invalid': submitted && reg.email.errors}"/>
+                <div *ngIf="submitted && reg.email.errors" class=invalid-feedback>
+                    <div class="validator" *ngIf='reg.email.errors.required'>Email is required</div>
+                    <div class="validator" *ngIf="reg.email.errors.email">Enter a valid email address</div>
+                </div>
+            </div>
+            <br />
+            <!--input for password with validators-->
+            <div class="form-group">
+                <label for="password" class='input-fields'>PASSWORD</label> <br />
+                <input type="password" formControlName="password" class="form-control" minlength="6" [ngClass]=
+                "{'is-invalid': submitted && reg.password.errors}"/>
+                <div *ngIf="submitted && reg.password.errors" class=invalid-feedback>
+                    <div class="validator" *ngIf='reg.password.errors.required'>Password is required</div>
+                    <div class="validator" *ngIf="submitted && !reg.password.errors.minLength">
+                        Password must be at least 6 characters long</div>
+                </div>
+            </div>
+            <br />
+            <!--input for password confirmation with validators-->
+            <div class="form-group">
+                <label for="validatePassword" class='input-fields'>CONFIRM PASSWORD</label> <br />
+                <input type="password" formControlName="validatePassword" class="form-control" [ngClass]=
+                "{'is-invalid': submitted && reg.validatePassword.errors}"/>
+                <div *ngIf="submitted && reg.validatePassword.errors" class=invalid-feedback>
+                    <div class="validator" *ngIf='reg.validatePassword.errors.required'>Please confirm Password</div>
+                </div>
+                <div class="validator" *ngIf="validatePassword.value !== password.value">Passwords do not match</div>  
+            </div>
+            <br />
+            <br />
+            <!--complete registration button-->
+            <div class="form-group">
+                <button type="submit" click="onSubmit()" class="btn btnPrimary">
+                    Register
+                </button>
+                <!--login button-->
+                <button type="button" [routerLink]="['/login']" class="btn btnSecondary">
+                    Login
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

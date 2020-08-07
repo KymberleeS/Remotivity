@@ -1,0 +1,43 @@
+<!-- <div style="background-color:black;height:400px">
+  <div [formGroup]="loginForm" style="background-color:palevioletred;padding :20px; border:2px solid black" >
+    <h1> Welcome Back!</h1>
+    <input type ="" formControlName = 'email' placeholder="Email">
+    <div *ngIf="loginForm.get('email').errors">
+      <span *ngIf ="submitted && loginForm.get('email').errors['required']">Email is required</span>
+    </div>
+    <input type ="" formControlName = 'password' placeholder="Password">
+    <div *ngIf="loginForm.get('password').errors">
+      <span *ngIf ="submitted && loginForm.get('password').errors['required']">Password is required</span>
+    </div>
+    <button (click)="submit()" [routerLink]="['/calendar']" style="background-color:skyblue;">Submit</button>
+    <a [routerLink]="['/register']" class="btn btn-link"> Register</a>
+  </div>
+</div>  -->
+
+
+<div class='bold-line'></div>
+<div class='container'>
+  <div class='window'>
+    <img src="assets/images/remotivity-logo.png" alt="Word Logo" class="logo1">
+    <img src="assets/images/img-logo.png" alt="Image Logo" class="logo2">
+      <div class='overlay'></div>
+      <div class='content'>
+        <div [formGroup]="loginForm" >
+          <div class='welcome'>Welcome Back!</div>
+          <div class='subtitle'>Login</div>
+          <div class='input-fields'>
+            <input type ='' formControlName = 'email' placeholder="Email" class='input-line full-width'> 
+            <div *ngIf="loginForm.get('email').errors">
+              <span *ngIf ="submitted && loginForm.get('email').errors['required']">Email is required</span>
+            </div>
+            <input type ="password" formControlName = 'password' placeholder="Password" class='input-line full-width'>
+            <div *ngIf="loginForm.get('password').errors">
+              <span *ngIf ="submitted && loginForm.get('password').errors['required']">Password is required</span>
+            </div>
+        </div>
+          <button (click)="submit()" [disabled]="loading" class='ghost-round full-width moreSpace'>Sign In</button>
+          <div><button [routerLink]="['/signup']" class='ghost-round full-width'>Don't have an account? Sign Up</button></div>
+        </div>
+      </div>
+  </div>
+</div>

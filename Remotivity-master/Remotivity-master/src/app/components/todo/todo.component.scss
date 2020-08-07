@@ -1,0 +1,154 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.col1header {
+    font-family: "Montserrat";
+    text-align: center;
+    color: #88b0e9;
+}
+
+.container-fluid {
+    width: 95%;
+}
+
+.row {
+    margin-left: 0%;
+    margin-bottom: 3%;
+    margin-top: 5%;
+    width: 100%;
+    height: auto;
+}
+
+#midcol {
+    border-right: 5px dotted;
+    border-left: 5px dotted;
+    border-bottom: 5px dotted;
+    height: 680px;
+    overflow-y: auto;
+}
+
+.fields {
+    height: 33px;
+    width: 98%;
+    font-family: "Roboto";
+    font-size: 17px;
+}
+
+.details {
+    width: 98%;
+    height: 230px;
+    font-family: "Roboto";
+    font-size: 17px;
+}
+
+.item {
+    width: 100%;
+    cursor: pointer;
+    background-color: white;
+	color: black;
+	font-family: "Montserrat";
+	font-size: 17px;
+	padding: 16px 31px;
+    text-decoration: none;
+    border: none;
+    border-bottom: 3px solid;
+}
+
+.item:hover {
+    background-color: #88b0e9;
+}
+
+.col1buttons {
+    margin-bottom: 3%;
+}
+
+.save {
+    background-color:#c6c0e0;
+	border:1px solid #c6c0e0;
+	display:inline-block;
+	cursor:pointer;
+	color:rgb(55, 49, 95);
+	font-family:"Montserrat";
+	font-size:17px;
+	padding:8px 31px;
+}
+
+.cancel {
+    margin-left: 10%;
+    background-color:#c6c0e0;
+	border:1px solid #c6c0e0;
+	display:inline-block;
+	cursor:pointer;
+	color:#332b66;
+	font-family:"Montserrat";
+	font-size:17px;
+	padding:8px 31px;
+}
+
+.save:hover, .cancel:hover {
+    background: #bbb3df;
+}
+
+// for testing purposes
+.testentry {
+    box-sizing: border-box;
+    margin-top: 3%;
+    padding-top: 25%;
+    padding-left: 10%;
+    padding-right:10%;
+    border: 3px none;
+    height: 650px;  
+    background-color: #88b0e9;
+    text-align: left;
+    font-family: "Montserrat";
+}
+
+.default {
+    text-align: center;
+    margin-top: 70%;
+    font-family:"Montserrat";
+}
+
+.col3buttons {
+    margin-top: 125%;
+}
+
+.edit {
+    margin-left: -15%;
+    background-color:rgb(177, 173, 194);
+	border:1px solid rgb(177, 173, 194);
+	display:inline-block;
+	cursor:pointer;
+	color:rgb(55, 49, 95);
+	font-family:"Montserrat";
+	font-size:17px;
+	padding:8px 31px;
+}
+
+/*.edit:hover {
+    background: linear-gradient(to bottom, #e07ce0 5%, #b3387a 100%);
+}*/
+
+.delete {
+    margin-right: 20%;
+    margin-left: 10%;
+    background-color: rgb(177, 173, 194);
+	border:1px solid rgb(177, 173, 194);
+	display:inline-block;
+	cursor:pointer;
+	color:rgb(55, 49, 95);
+	font-family:"Montserrat";
+	font-size:17px;
+	padding:8px 31px;
+}
+
+/*.delete:hover {
+    background: linear-gradient(to bottom, #e07ce0 5%, #b3387a 100%);
+}*/
+
+.inputlabel
+{
+    font-size: 19px;
+    font-family:"Montserrat";;
+    line-height: 1.5em;
+}

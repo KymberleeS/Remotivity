@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap-grid.min.css"/>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="col1header">New Event</h3><br /><br />
+            <form class="userinput">
+                <div class='inputlabel'>Title: </div>
+                <input type="text" class="fields"><br /><br /><br /><br />
+                <div class='inputlabel'>Start/End Date: </div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                      <input matStartDate placeholder="Start date">
+                      <input matEndDate placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                  </mat-form-field>
+                <!-- Start Time: <input type="text" class="date-time" placeholder="e.g 9:00 am"> <br /><br /> -->
+                <!-- End Time: <input type="text" class="date-time" placeholder="e.g 9:00 am"> <br /><br /> -->
+                <br /><br /><br />
+                <div class='inputlabel'>Details: </div>
+                <textarea class="details"></textarea><br /><br />
+                <div class="col1buttons">
+                    <input class="save" type="reset" value="Save" (click)="addButton()">
+                    <input class="cancel" type="reset" value="Cancel"> 
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4" id="midcol">
+            <button class="item" (click)="toggle(entry)" *ngFor="let entry of entries; let i = index;">{{entry.title}}: {{entry.date}}</button>
+        </div>
+        <div class="col-md-4">
+            <div class="default" *ngIf="!show">Click on an item to see it here! </div>
+            <div class="testentry" *ngIf="show">
+                {{displayContent}} <br /><br />
+                {{displayContent2}} <br /><br /><br />
+                Details:<br /><br />
+                {{displayContent3}}
+            </div>
+        </div>
+      </div>     
+</div>

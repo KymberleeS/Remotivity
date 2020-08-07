@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body, html {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+// tab styling starts here
+.mat-tab-header {
+    border-bottom: none;
+    height: 50%;
+}
+
+.tabs1 .mat-tab-header {
+    //text-decoration: underline;
+}
+
+.tabs2 .mat-tab-header {
+    //text-decoration: underline;
+}
+
+.tabs3 .mat-tab-header {
+    //text-decoration: underline;
+}
+
+.mat-tab-label {
+    margin-top: 1%;
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    font-family: 'Montserrat';
+    //font-weight: bold;
+    font-size: 20px;
+    color: #332b66;
+}
+
+.mat-tab-label-active {
+    background-color: #cfcdda;
+}
+
+.mat-ink-bar {
+  display: none;
+}
+// tab styling ends here

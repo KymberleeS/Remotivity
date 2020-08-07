@@ -1,0 +1,45 @@
+<!--NOTES: This is the basic template for the three column layout. Just copy&paste the code from the html and css file to 
+        whatever page needs this template. The code is editable, you can change whatever is needed to fit the needs of the 
+        specific page, such as adding more inputs within the form, changing colors, fonts, styling the buttons, etc.
+        It should not affect the rest of the application.
+    
+    WARNING: This is just the template/look of the layout. This does NOT yet include the logic needed for interacting with
+             the user. I did not any logic as it may not be exactly the same for all the pages.
+             Examples of logic to add:
+                -When and item in the middle column is clicked, its contents/details should expand to the rightmost column
+                 Have edit and save buttons in the bottom
+            
+                -If user has no saved items in the middle column, display message saying no items have been made yet.
+                 else, show items the user has created
+                
+                -Middle column: if list becomes long, have scroll function/filter search bar-->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap-grid.min.css"/>
+
+<h3 class="pagetitle">Your goals/reminders/appts&schedules, etc. [change title here]</h3>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Create New [insert here]</h3> <br /><br />
+            <form class="userinput">
+                Title: <input type="text"><br /><br />
+                Type A or Type B <br />
+                <input type="radio" /> [text here]<br />
+                <input type="radio" /> [text here]<br />
+                <br />
+                Example Duration <br /><br />
+                Start Time: <input type="text"> <br />
+                End Time: <input type="text"> <br /><br />
+                Details go here: <br />
+                <textarea id="details"></textarea> <br /><br />
+                <button>Save</button>
+                <button>Cancel</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <button class="item">item 1</button>
+        </div>
+        <div class="col-md-4"></div>
+      </div>     
+</div>

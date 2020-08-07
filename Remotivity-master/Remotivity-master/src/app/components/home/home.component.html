@@ -1,0 +1,190 @@
+<img src="assets/images/colorkey4.png" class="key"> <!--updated to new key image,keep this one-->
+<div class="container">
+  <div class="calendar-left">
+    
+        <!-- shows current date on left calendar
+        <div>
+          <div class="num-date">{{today | date:'dd'}}</div>
+          <div class="day">{{ today | date : 'EEEE' }}</div>
+        </div> -->
+
+        <!-- Mock date on left calendar for the demo -->
+        <div>
+          <div class="num-date">7</div>
+          <div class="day">Friday</div>
+        </div>
+
+        <!--day -->
+        <!--<div class="current-events">Current Events
+          <br/>
+          <ul>
+            <li>Day 09 Daily CSS Image</li>
+          </ul>
+          <span class="posts">See post events</span></div> -->
+        <!--current-events -->
+    
+        <div class="calendar-item">
+          <div class="item-text">Event</div>
+          <hr class="event-line"/>
+          <div class="plus">
+            <i class="fas fa-plus-circle" [routerLink]="['/appointments']"></i>
+          </div>
+        </div>
+
+        <div class="calendar-item">
+          <div class="item-text">To-Do List</div>
+          <hr class="event-line"/>
+          <div class="plus">
+            <i class="fas fa-plus-circle" [routerLink]="['/todo']"></i>
+          </div>
+        </div>
+
+        <div class="calendar-item">
+          <div class="item-text">Goal</div>
+          <hr class="event-line"/>
+          <div class="plus">
+            <i class="fas fa-plus-circle" [routerLink]="['/goals']"></i>
+          </div>
+        </div>
+
+        <div class="calendar-item">
+          <div class="item-text">Reminder</div>
+          <hr class="event-line"/>
+          <div class="plus">
+            <i class="fas fa-plus-circle" [routerLink]="['/reminders']"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- calendar-left -->
+    <div class="calendar-base">
+      <div class="base-content">
+        <div class="year">2020</div>
+      <!-- year -->
+  
+  
+      <div class="months">
+        <span class="month" [ngClass]="this.selectedMonth == 1 ? 'active' : ''">Jan</span>
+        <span class="month" [ngClass]="this.selectedMonth == 2 ? 'active' : ''">Feb</span> 
+        <span class="month" [ngClass]="this.selectedMonth == 3 ? 'active' : ''">Mar</span> 
+        <span class="month" [ngClass]="this.selectedMonth == 4 ? 'active' : ''">Apr</span> 
+        <!-- <strong class="month" [ngClass]="this.selectedMonth == 4 ? 'active' : ''">Apr</strong> -->
+        <span class="month" [ngClass]="this.selectedMonth == 5 ? 'active' : ''">May</span>
+        <span class="month" [ngClass]="this.selectedMonth == 6 ? 'active' : ''">Jun</span>
+        <span class="month" [ngClass]="this.selectedMonth == 7 ? 'active' : ''">July</span> 
+        <span class="month" [ngClass]="this.selectedMonth == 8 ? 'active' : ''">Aug</span> 
+        <span class="month" [ngClass]="this.selectedMonth == 9 ? 'active' : ''">Sep</span> 
+        <span class="month" [ngClass]="this.selectedMonth == 10 ? 'active' : ''">Oct</span> 
+        <span class="month" [ngClass]="this.selectedMonth == 11 ? 'active' : ''">Nov</span> 
+        <span class="month" [ngClass]="this.selectedMonth == 12 ? 'active' : ''">Dec</span>
+      </div><!-- months -->
+      <hr class="month-line" />
+  
+      <div class="days">
+          <div>SUN</div> 
+          <div>MON</div> 
+          <div>TUE</div> 
+          <div>WED</div> 
+          <div>THURS</div> 
+          <div>FRI</div> 
+          <div>SAT</div>
+        </div>
+      <!-- days -->
+          <div class = "date-container">
+              <!-- <div class = date [ngClass]="{'current': this.date.getDate() == i+1-this.start, 'colorbox1': this.date.getDate() == i-1-this.start, 'colorbox2': this.date.getDate() == i+1-this.start, 'colorbox3': this.date.getDate() == i+2-this.start, 'colorbox4': this.date.getDate() == i+3-this.start, 'colorbox5': this.date.getDate() == i+4-this.start, 'colorbox6': this.date.getDate() == i+5-this.start }" *ngFor="let day of [].constructor(this.days+this.start); let i = index;"> -->
+                <div class = date [ngClass]="{'current': this.date.getDate() == i+1-this.start, 'colorbox1': this.date.getDate() == i+2-this.start, 'colorbox2': this.date.getDate() == i+3-this.start, 'colorbox3': this.date.getDate() == i+4-this.start, 'colorbox4': this.date.getDate() == i+5-this.start, 'colorbox5': this.date.getDate() == i+6-this.start, 'colorbox6': this.date.getDate() == i+7-this.start }" *ngFor="let day of [].constructor(this.days+this.start); let i = index;">
+
+                {{i<this.start ? '' : i+1-this.start}}
+                <!-- <div class="dotDate" *ngIf="getDateData(this.date, i+1-this.start)"></div> -->
+                <!-- <div class="dotDate" *ngIf="dotOnDate(this.date, i+1-this.start)"></div> -->
+                
+                <div class="tooltip" *ngIf="firstDot(this.date, i+1-this.start)">
+                  <span class="tooltiptext">Final Presentation</span>
+                </div>
+                <div class="tooltip" *ngIf="secondDot(this.date, i+1-this.start)">
+                  <span class="tooltiptext">Duy’s Movie Night</span>
+                </div>
+                <div class="tooltip" *ngIf="thirdDot(this.date, i+1-this.start)">
+                  <span class="tooltiptext">Tea Party at Amanda’s</span>
+                </div>
+                <div class="tooltip" *ngIf="fourthDot(this.date, i+1-this.start)">
+                  <span class="tooltiptext">To-do List</span>
+                </div>
+                <div class="tooltip" *ngIf="fifthDot(this.date, i+1-this.start)">
+                  <span class="tooltiptext">Mike McCall's Bowling Night</span>
+                </div>
+                <div class="tooltip" *ngIf="sixthDot(this.date, i+1-this.start)">
+                  <span class="tooltiptext">Gaming with Josh</span>
+                </div>
+                <div class="tooltip" *ngIf="seventhDot(this.date, i+1-this.start)">
+                  <span class="tooltiptext">Michelle's Birthday</span>
+                </div>
+
+                <div>
+                  <button *ngIf="this.date.getDate() == i+1-this.start ? 'current' : ''" class="modal-button" (click)="openModal('custom-modal-1')"></button>
+                </div>
+              </div>
+              <!-- ngClass lets us add a class only on the current date, and we subtract the days before the month starts -->
+          </div>
+
+
+
+
+  
+      </div>
+      
+    </div>
+    <!-- calendar-base -->
+
+   <!--<img src="assets/images/colorkey.png" class="key">--> 
+  
+  </div>
+  <!-- container -->
+
+  <!-- <div>
+    <button (click)="openModal('custom-modal-1')">Open Modal</button>
+  </div> -->
+
+<jw-modal id="custom-modal-1">
+    <div class= "modal-title-margin">
+      <h1>Your Daily Rating</h1>
+    </div>
+    <div class= "modal-subtitle-margin">
+      <h5>Where 1 is worst and 5 is best!</h5>
+    </div>
+    <p>How was your day?</p>
+      <mat-slider
+        thumbLabel
+        [displayWith]="formatLabel"
+        tickInterval="1"
+        [(ngModel)]="value1"
+        min="1"
+        max="5"
+        color = "primary">
+      </mat-slider>
+    <p>What was your productivity level today?</p>
+      <mat-slider
+        thumbLabel
+        [displayWith]="formatLabel"
+        tickInterval="1"
+        [(ngModel)]="value2"
+        min="1"
+        max="5" 
+        color = "primary">
+      </mat-slider>
+    <p>What was your stress level today?</p>
+      <mat-slider
+        thumbLabel
+        [displayWith]="formatLabel"
+        tickInterval="1"
+        [(ngModel)]="value3"
+        min="1"
+        max="5"
+        color = "primary">
+      </mat-slider>
+    
+    <!-- <h1 style="height:500px"></h1> -->
+    <p></p>
+    <button (click)="closeModal('custom-modal-1');" class= "submit-button">Save and Close</button>
+</jw-modal>

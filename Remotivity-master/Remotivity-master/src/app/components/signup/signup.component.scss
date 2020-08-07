@@ -1,0 +1,199 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.validator {
+    color: #fff;
+    font-size: 15px;
+    width: 100%;
+    font-weight: normal;
+}
+
+#signUp {
+    box-sizing: border-box;
+    width: 400px;
+    height: 2px;
+    color: #2f2587;
+    padding-left: 160px;
+    font-family: monospace;
+    font-size: 40px;
+    letter-spacing: 0px;
+    letter-spacing: 0.05rem;
+    opacity: 0.90;   
+}
+
+.box {
+    padding-left: 900px;
+    padding-top: 5px;
+    padding-bottom: 25px;
+    background: white;
+    overflow: auto;
+    min-height: 95.7vh;
+}
+
+.boxBody {
+    z-index: 100;
+    color: white;
+    font-family: Montserrat;
+    font-weight: bold;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    box-sizing: border-box;
+    width: 360px;
+    background: #fff;
+    background: url('https://pexels.imgix.net/photos/27718/pexels-photo-27718.jpg?fit=crop&w=1280&h=823') top left no-repeat;
+}
+
+form {
+    background: -webkit-linear-gradient(#8CA6DB, #B993D6);
+    background: linear-gradient(#8CA6DB, #B993D6);
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    position: relative;
+    height: auto;
+    width: 350px;
+    z-index: 1;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 120px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.form-control {
+    background: none;
+    margin-bottom: 10px;
+    line-height: 2em;
+    color: #fff;
+    font-family: Roboto;
+    font-weight: 300;
+    letter-spacing: 0px;
+    letter-spacing: 0.02rem;
+    font-size: 19px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.65);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+input {
+    height: 25px;
+    width: 440px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    //text-align: center;
+    outline: none;
+}
+
+.btnPrimary {
+    -ms-transform: translateX(210%);
+    transform: translateX(210%);
+    cursor: pointer;
+    //background-color: white;
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    //color: #2f2587;
+    color: #fff;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    font-size: 19px;
+    font-size: 1.2rem;
+    font-family: Montserrat;
+    font-weight: bold;
+    line-height: 2.5em;
+    margin-top: auto;
+    margin-bottom: 25px;
+    padding-left: 12px;
+    padding-right: 12px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.btnSecondary {
+    -ms-transform: translateX(-17%);
+    transform: translateX(-17%);
+    cursor: pointer;
+    //background-color: white;
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    // color: #2f2587;
+    color: #fff;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    font-size: 19px;
+    font-size: 1.2rem;
+    font-family: Montserrat;
+    font-weight: bold;
+    line-height: 2.5em;
+    margin-top: auto;
+    margin-bottom: 25px;
+    padding-left: 17px;
+    padding-right: 17px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.btnPrimary:hover, .btnSecondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    // submit/register button when hovered
+    color: #fff;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+  }
+  
+
+.titleLogo {
+    margin-left: -700px;
+    margin-bottom: -200px;
+    height: auto;
+    width: 500px;
+}
+
+.imgLogo {
+    margin-left: -390px;
+    margin-bottom: -500px;
+    width: 300px;
+    height: auto;
+}
+
+.description {
+    box-sizing: border-box;
+    width: 600px;
+    height: 70px;
+    border: 2px;
+    position: absolute;
+    left: 150px;
+    top: 530px;
+    text-align: center;
+    font-size: 15px;
+    font-family: Montserrat;
+    // color: #b3387a;
+    color:  #2f2587;
+}
+
+.input-fields
+{
+    background: none;
+    font-family: roboto;
+  line-height: 2.0em;
+  color: #fff;
+  font-weight: 410;
+  letter-spacing: 0px;
+  letter-spacing: 0.02rem;
+  font-size: 19px;
+  font-size: 1.2rem;
+}
+
+button:focus {
+    outline: none;
+  }

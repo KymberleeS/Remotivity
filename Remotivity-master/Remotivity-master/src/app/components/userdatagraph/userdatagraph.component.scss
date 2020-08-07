@@ -1,0 +1,75 @@
+.description {
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+highcharts-chart {
+    width: 50%; 
+    height: 500px; 
+    display: block;
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.smallkey{
+    display: block;
+    width: 100%;
+}
+.legend * {
+    display: inline;
+}
+
+.legend {
+    box-sizing: border-box;
+    border: 3px dashed #9b89d2;
+    border-radius: 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 27%;
+    margin-right: 25%;
+}
+
+.productivity {
+    background-color:#9b89d2;
+	border:1px solid #9b89d2;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:"Montserrat";
+	font-size:17px;
+    padding:8px 31px;
+    margin-left: 22%;
+    margin-bottom: 5%;
+}
+
+.productivity:hover {
+    background: linear-gradient(to bottom, #9b89d2 5%, #e07ce0 100%);
+}
+
+.wellness {
+    margin-left: 10%;
+    background-color:#9b89d2;
+	border:1px solid #9b89d2;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:"Montserrat";
+	font-size:17px;
+	padding:8px 31px;
+}
+
+.wellness:hover {
+    background: linear-gradient(to bottom, #9b89d2 5%, #e07ce0 100%);
+}
+
+.legend {
+    text-align: center;
+}
+
+.keyimage
+{
+    display: inline-block;
+    // used to resize image
+    width:700px;
+    height:auto;
+}

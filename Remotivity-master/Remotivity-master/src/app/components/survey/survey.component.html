@@ -1,0 +1,37 @@
+<h2 class="pageheader">Enter Today's Rating</h2> 
+<br /><br /><br />
+
+<form [formGroup]="rate" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-group">
+        What was your stress level today? <br /><br />
+        <input type="radio" value="vSad" formControlName="rating"/> <img class="faces" src="assets/images/SurveyFaces/vSad.png">
+        <input type="radio" value="sad" formControlName="rating"/> <img class="faces" src="assets/images/SurveyFaces/sad.png">
+        <input type="radio" value="ok" formControlName="rating"/> <img class="faces" src="assets/images/SurveyFaces/ok.png">
+        <input type="radio" value="happy" formControlName="rating"/> <img class="faces" src="assets/images/SurveyFaces/happy.png">
+        <input type="radio" value="vHappy" formControlName="rating"/> <img class="faces" src="assets/images/SurveyFaces/vHappy.png">
+    </div>
+    <br /><br /><br />
+    <div class="form-group">
+        What was your productivity level today? <br /><br />
+        <input type="radio" value="vSad" formControlName="rating2"/> <img class="faces" src="assets/images/SurveyFaces/vSad.png">
+        <input type="radio" value="sad" formControlName="rating2"/> <img class="faces" src="assets/images/SurveyFaces/sad.png">
+        <input type="radio" value="ok" formControlName="rating2"/> <img class="faces" src="assets/images/SurveyFaces/ok.png">
+        <input type="radio" value="happy" formControlName="rating2"/> <img class="faces" src="assets/images/SurveyFaces/happy.png">
+        <input type="radio" value="vHappy" formControlName="rating2"/> <img class="faces" src="assets/images/SurveyFaces/vHappy.png">
+    </div>
+    <br /><br /><br />
+    <div class="form-group">
+        How was your overall day? <br /><br />
+        <input type="radio" value="vSad" formControlName="rating3"/> <img class="faces" src="assets/images/SurveyFaces/vSad.png">
+        <input type="radio" value="sad" formControlName="rating3"/> <img class="faces" src="assets/images/SurveyFaces/sad.png">
+        <input type="radio" value="ok" formControlName="rating3"/> <img class="faces" src="assets/images/SurveyFaces/ok.png">
+        <input type="radio" value="happy" formControlName="rating3"/> <img class="faces" src="assets/images/SurveyFaces/happy.png">
+        <input type="radio" value="vHappy" formControlName="rating3"/> <img class="faces" src="assets/images/SurveyFaces/vHappy.png">
+    </div>
+    <br /><br /><br />
+    <div class="form-group">
+        <button type="submit" click="onSubmit()" class="btn btnPrimary">
+            Save and Return to Calendar
+        </button>
+    </div>
+</form>

@@ -1,0 +1,62 @@
+.foot{
+    color: slategrey;
+}
+
+.footerlogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    background: whitesmoke;
+
+}
+
+.social{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+
+
+h1{
+    margin: 0;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+header {
+  background: whitesmoke;
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+
+    nav {
+       text-align: left;
+    
+        ul {
+            list-style-type: none;
+
+            li {
+              //  display: inline;
+                padding: 0px, 10px;
+                float: none;
+                margin-left: 50px;
+                margin-right:  15px;
+                color: gray;
+                
+
+                a {
+                    padding: 2.5em;
+                    text-transform: uppercase;
+                    font-size: .8em;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
